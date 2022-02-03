@@ -9,6 +9,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: AWS_ACCESS_KEY
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js
