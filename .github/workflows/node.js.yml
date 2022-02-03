@@ -18,7 +18,7 @@ jobs:
     - run: npm i request
     - run: nohup node server.js 2>&1 > server.log &
     - run: npm i -g speed-test && speed-test -vb
-    - run: curl --head http://localhost:3000
+    - run: cat server.log
     - uses: actions/upload-artifact@v2
       with:
        name: server-log
