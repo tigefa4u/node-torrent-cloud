@@ -15,7 +15,7 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: lts/*
-    - run: npm i request
+    - run: npm i
     - run: nohup node server.js 2>&1 > server.log &
     - run: npm i -g speed-test && speed-test -vb
     - run: cat server.log
