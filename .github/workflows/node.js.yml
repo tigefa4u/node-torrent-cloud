@@ -17,6 +17,7 @@ jobs:
       with:
         node-version: lts/fermium
     - run: npm i
+    - run: touch aws.js
     - run: nohup node server.js 2>&1 > server.log &
     - run: npm i -g speed-test && speed-test -vb
     - run: cat server.log
